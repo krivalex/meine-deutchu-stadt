@@ -3,6 +3,13 @@
     <div class="header-navbar">
       <img src="@/assets/logo.png">
       <div class="navbar">
+        <router-link to="/">Алматы</router-link>
+        <router-link to="/">Астана</router-link>
+        <router-link to="/">
+          Другие
+          <img class="arrow-down" src="@/assets/chevron-down.png" alt="arrow-down" />
+        </router-link>
+        <router-link to="/">О нас</router-link>
       </div>
     </div>
     <div class="name-image">
@@ -36,8 +43,9 @@ export default {
 #header {
   background: url('@/assets/main-banner.png');
   background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
-  width: 100%;
+  width: 100vw;
   height: 78vh;
 }
 
@@ -81,5 +89,36 @@ export default {
 .header-navbar img {
   width: 170px;
   mix-blend-mode: multiply
+}
+
+.navbar {
+  width: 488px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  color: #5C5754;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 29px;
+}
+
+.navbar router-link {
+  color: #5C5754;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.arrow-down {
+  max-width: 24px;
+  max-height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+
 }
 </style>

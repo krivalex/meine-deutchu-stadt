@@ -8,3 +8,8 @@
   font-family: 'komikax';
   src: url('@/assets/fonts/komikax.otf') format('truetype');
 }
+
+@font-face {
+  font-family: 'montserrat';
+  src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+}

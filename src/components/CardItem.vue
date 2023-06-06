@@ -88,4 +88,17 @@ export default {
   justify-content: center;
   align-items: center;
 }
+
+@media screen and (max-width: 784px) {
+  .number span {
+    position: absolute;
+    top: 55px;
+    left: 82px;
+    font-family: komikax, regular;
+    color: #5C5754;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+  }
+}
 </style>

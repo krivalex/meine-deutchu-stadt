@@ -3,6 +3,7 @@
     <header-section></header-section>
     <history-section></history-section>
     <places-section></places-section>
+    <history-section class="joke"></history-section>
   </section>
 </template>
 
@@ -23,5 +24,8 @@ export default {
 
 
 
-<style scoped>
+<style>
+.joke .content .name-image {
+  flex-direction: row-reverse;
+}
 </style>

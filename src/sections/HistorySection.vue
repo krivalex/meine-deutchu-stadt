@@ -53,7 +53,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 .content {
   min-width: calc(1216/1920 * 100%);
   display: flex;

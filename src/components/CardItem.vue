@@ -18,9 +18,6 @@
 
 export default {
   name: 'one-card',
-  mounted() {
-    console.log(this.$store.state.cards);
-  },
   props: {
     card: {
       type: Object,

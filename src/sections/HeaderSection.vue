@@ -46,7 +46,6 @@ export default {
   background-size: cover;
   background-position: center;
   width: 100vw;
-  height: 78vh;
 }
 
 .name-image {
@@ -54,8 +53,9 @@ export default {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  margin: 0 368.6px;
-  gap: 192px;
+  margin: 0 19%;
+  gap: calc(192/1920 * 100%);
+  width: calc(1220/1920 * 100%);
 }
 
 .name {
@@ -84,6 +84,7 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: calc(1220/1920 * 100%);
 }
 
 .header-navbar img {

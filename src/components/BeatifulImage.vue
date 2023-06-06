@@ -106,4 +106,10 @@ export default {
   width: 48px;
   height: 49px;
 }
+
+@media screen and (max-width: 1920px) {
+  .all-image {
+    transform: scale(0.8);
+  }
+}
 </style>

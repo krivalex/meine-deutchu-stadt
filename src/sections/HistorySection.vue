@@ -113,4 +113,12 @@ export default {
   margin-top: 71px;
   cursor: pointer;
 }
+
+@media screen and (max-width: 768px) {
+  #history {
+    width: 1280px;
+    margin: 0 auto;
+    transform: scale(0.8);
+  }
+}
 </style>

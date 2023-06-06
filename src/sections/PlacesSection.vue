@@ -133,4 +133,17 @@ export default {
 .card-item {
   position: absolute;
 }
+
+@media screen and (max-width: 768px) {
+  .label {
+    min-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .cards {
+    width: 100%;
+    margin: 0 50px;
+  }
+}
 </style>

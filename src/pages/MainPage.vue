@@ -31,6 +31,13 @@ export default {
 
 
 <style>
+@media screen and (max-width: 784px) {
+  #main-page {
+    width: 1280px;
+    height: 100%;
+  }
+}
+
 .joke .content .name-image {
   flex-direction: row-reverse;
 }

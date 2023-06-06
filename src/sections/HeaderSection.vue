@@ -120,6 +120,15 @@ export default {
   align-items: center;
   justify-content: center;
   flex-direction: row;
+}
 
+@media screen and (max-width: 768px) {
+  #header {
+    min-width: 1280px;
+  }
+
+  .name-image {
+    margin: 0 10%;
+  }
 }
 </style>

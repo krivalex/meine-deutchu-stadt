@@ -5,6 +5,7 @@
     <places-section></places-section>
     <history-section class="joke"></history-section>
     <yandex-section></yandex-section>
+    <footer-section></footer-section>
   </section>
 </template>
 
@@ -13,6 +14,7 @@ import HeaderSection from '@/sections/HeaderSection.vue'
 import HistorySection from '@/sections/HistorySection.vue'
 import PlacesSection from '@/sections/PlacesSection.vue'
 import YandexSection from '@/sections/YandexSection.vue'
+import FooterSection from '@/sections/FooterSection.vue'
 
 export default {
   name: 'main-page',
@@ -20,7 +22,8 @@ export default {
     HeaderSection,
     HistorySection,
     PlacesSection,
-    YandexSection
+    YandexSection,
+    FooterSection,
   }
 }
 </script>

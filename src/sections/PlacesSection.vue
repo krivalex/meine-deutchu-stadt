@@ -116,7 +116,7 @@ export default {
   position: absolute;
   top: 86px;
   left: 172px;
-  z-index: -1;
+  z-index: 0;
 }
 
 .cards {

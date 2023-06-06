@@ -30,7 +30,7 @@
         </div>
       </div>
       <div class="button-pdf">
-        <button>
+        <button @click="downloadPDF">
           Скачать маршрут: Увлекательный маршрут по городу
           <img src="@/assets/pdf-image.png" alt="pdf-image" />
         </button>
@@ -40,6 +40,7 @@
 </template>
 
 <script>
+import jsPDF from 'jspdf';
 
 export default {
   name: 'history-section',
@@ -48,6 +49,12 @@ export default {
   computed: {
     image() {
       return require("@/assets/history-image.png");
+    }
+  },
+  methods: {
+    downloadPDF() {
+      const pdf = new jsPDF();
+      pdf.save("Увлекательный маршрут по городу.pdf");
     }
   }
 }
@@ -104,5 +111,6 @@ export default {
   font-size: 18px;
   line-height: 154%;
   margin-top: 71px;
+  cursor: pointer;
 }
 </style>

@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
 import store from './store'
+import router from '@/router'
 
 import YmapPlugin from 'vue-yandex-maps'
 
@@ -21,4 +22,5 @@ library.add(faUserSecret)
 
 app.use(YmapPlugin, settings)
 app.use(store)
+app.use(router)
 app.mount('#app')

@@ -19,7 +19,7 @@ export default {
   },
   computed: {
     image() {
-      return require("@/assets/mainPhoto/header-image.png");
+      return require("@/assets/history-image.png");
     }
   }
 }
@@ -47,8 +47,8 @@ export default {
   left: 31px;
   top: 29px;
   object-fit: cover;
-  border-radius: 219deg;
   z-index: 7;
+  border-radius: 219px;
   position: absolute;
 }
 
@@ -103,13 +103,7 @@ export default {
 .ellipse-red {
   top: 249px;
   left: 61px;
-  width: 48px;
+  max-width: 48px;
   height: 49px;
-}
-
-@media screen and (max-width: 1920px) {
-  .all-image {
-    transform: scale(0.8);
-  }
 }
 </style>

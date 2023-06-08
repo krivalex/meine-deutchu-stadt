@@ -2,7 +2,7 @@
   <section id="history">
     <div class="content">
       <div class="name-image">
-        <img :src="image" alt="history">
+        <img class="responsive-image" :src="image" alt="history">
         <div class="text">
           <p>
             Немецкая история Верного – Алма-Аты – Алматы начинается буквально с момента основания города в 1854 г. С
@@ -48,7 +48,7 @@ export default {
   },
   computed: {
     image() {
-      return require("@/assets/history-image.png");
+      return require("@/assets/mainPhoto/header-image.png");
     }
   },
   methods: {
@@ -60,7 +60,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .content {
   min-width: calc(1216/1920 * 100%);
   display: flex;
@@ -112,6 +112,13 @@ export default {
   line-height: 154%;
   margin-top: 71px;
   cursor: pointer;
+}
+
+.responsive-image {
+  border-radius: 114px;
+  width: 460px;
+  height: 529px;
+  object-fit: cover;
 }
 
 @media screen and (max-width: 768px) {

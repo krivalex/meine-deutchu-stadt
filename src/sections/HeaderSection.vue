@@ -88,9 +88,9 @@ export default {
 }
 
 .header-navbar img {
-  width: 170px;
-  mix-blend-mode: multiply
+  mix-blend-mode: multiply;
 }
+
 
 .navbar {
   width: 488px;
@@ -107,6 +107,16 @@ export default {
 
 .navbar router-link {
   color: #5C5754;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  text-decoration: none;
+}
+
+.navbar a {
+  color: #5C5754;
+  text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;

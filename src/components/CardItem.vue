@@ -1,8 +1,8 @@
 <template>
-  <div class="one-card">
+  <div class="one-card" @click="redirectPlace">
     <img class="background" src="@/assets/mainPhoto/red-lines.png" alt="card.background">
     <div class="image-part">
-      <img :src="card.image" alt="card.image">
+      <img class="circle-image" :src="card.image" alt="card.image">
       <div class="number">
         <img class="buble" src="@/assets/mainPhoto/yellow-2.png" alt="card.background">
         <span>{{ card.number }}</span>
@@ -16,12 +16,19 @@
 
 <script>
 
+
 export default {
   name: 'one-card',
   props: {
     card: {
       type: Object,
       required: true
+    }
+  },
+  methods: {
+    redirectPlace() {
+
+      this.$router.push(`/place/${this.card.id}`)
     }
   },
   components: {
@@ -66,8 +73,8 @@ export default {
 
 .number span {
   position: absolute;
-  top: 52px;
-  left: 82px;
+  top: 54px;
+  left: 80px;
   font-family: komikax, regular;
   color: #5C5754;
   font-style: normal;
@@ -87,6 +94,12 @@ export default {
   color: #5C5754;
   justify-content: center;
   align-items: center;
+}
+
+.circle-image {
+  width: 264px;
+  height: 264px;
+  border-radius: 50%;
 }
 
 @media screen and (max-width: 784px) {

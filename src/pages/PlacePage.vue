@@ -1,23 +1,11 @@
 <template>
-  <section id="header">
-    <div class="header-navbar">
-      <img src="@/assets/logo.png">
-      <div class="navbar">
-        <router-link to="/">Алматы</router-link>
-        <router-link to="/">Астана</router-link>
-        <router-link to="/">
-          Другие
-          <img class="arrow-down" src="@/assets/chevron-down.png" alt="arrow-down" />
-        </router-link>
-        <router-link to="/">О нас</router-link>
-      </div>
-    </div>
+  <section id="place">
     <div class="name-image">
       <div class="name">
         <h1>{{ place.id }}. {{ place.title }}</h1>
         <h2>прогулка по «немецкой» истории города</h2>
       </div>
-      <beautiful-image />
+      <beautiful-image class="no-mobile" />
     </div>
 
   </section>
@@ -43,12 +31,12 @@ export default {
 </script>
 
 <style scoped>
-#header {
+#place {
   background: url('@/assets/main-banner.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: 100vw;
+
 }
 
 .name-image {
@@ -59,6 +47,7 @@ export default {
   margin: 0 19%;
   gap: calc(192/1920 * 100%);
   width: calc(1220/1920 * 100%);
+  margin-top: 70px;
 }
 
 .name {
@@ -90,53 +79,34 @@ export default {
   width: calc(1220/1920 * 100%);
 }
 
-.navbar {
-  width: 488px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-transform: uppercase;
-  font-family: 'Montserrat', sans-serif;
-  color: #5C5754;
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 29px;
-}
-
-.navbar router-link {
-  color: #5C5754;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  text-decoration: none;
-}
-
-.navbar a {
-  color: #5C5754;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-}
-
-.arrow-down {
-  max-width: 24px;
-  max-height: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-}
-
 @media screen and (max-width: 768px) {
+
   #header {
-    min-width: 1280px;
+    min-height: 800px;
   }
 
   .name-image {
-    margin: 0 10%;
+    flex-direction: column;
+  }
+
+  .name h1 {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 20px;
+    width: 100%;
+  }
+
+  .header-navbar {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 50px 0;
+  }
+
+  .no-mobile {
+    display: none;
   }
 }
 </style>

@@ -135,15 +135,23 @@ export default {
 }
 
 @media screen and (max-width: 768px) {
-  .label {
-    min-width: 100%;
-    margin: 0 auto;
-    text-align: center;
+  #places {
+    margin-top: 80px;
+    position: relative;
   }
 
   .cards {
-    width: 100%;
-    margin: 0 50px;
+    transform: scale(0.3);
+    width: 300px;
+    height: 600px;
+    left: -33%;
+    bottom: 200px;
   }
+
+  .label {
+    text-align: center;
+  }
+
+
 }
 </style>

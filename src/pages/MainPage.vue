@@ -31,14 +31,28 @@ export default {
 
 
 <style>
-@media screen and (max-width: 784px) {
-  #main-page {
-    width: 1280px;
-    height: 100%;
-  }
+#main-page {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .joke .content .name-image {
   flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 784px) {
+  #main-page {
+    width: 100vw;
+    height: 100%;
+  }
+
+  .joke .content .name-image {
+    flex-direction: column-reverse;
+    margin-top: 30px;
+  }
 }
 </style>

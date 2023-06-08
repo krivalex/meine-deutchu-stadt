@@ -12,7 +12,7 @@ export default {
   name: 'yandex-section',
   mounted() {
     const cards = this.$store.state.cards
-    const start_coords = [55.76, 37.64]
+    const start_coords = [55.750, 37.655]
     const text_coords = [55.752, 37.655]
 
     ymaps.ready(() => {
@@ -20,6 +20,8 @@ export default {
         center: [55.76, 37.64 + 0.055 + 0.055],
         zoom: 13
       });
+
+      myMap.remove
 
 
 
@@ -39,7 +41,7 @@ export default {
           iconLayout: 'default#image',
           iconImageHref: image,
           iconImageSize: [110, 110],
-          iconImageOffset: [-3, -42]
+          iconImageOffset: [-110, -110]
         });
 
         myMap.geoObjects.add(myImage);
@@ -82,5 +84,9 @@ export default {
   color: #5C5754;
   font-size: 22px;
   margin: 80px 0;
+}
+
+[class*='copyrights-pane'] {
+  display: none !important;
 }
 </style>

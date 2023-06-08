@@ -61,6 +61,11 @@ export default {
 </script>
 
 <style scoped>
+#history {
+  width: 100vw;
+  height: 100%;
+}
+
 .content {
   min-width: calc(1216/1920 * 100%);
   display: flex;
@@ -85,7 +90,7 @@ export default {
 }
 
 .text {
-  width: 700px;
+  max-width: 700px;
 }
 
 .text p {
@@ -123,9 +128,44 @@ export default {
 
 @media screen and (max-width: 768px) {
   #history {
-    width: 1280px;
+    height: 100%;
     margin: 0 auto;
-    transform: scale(0.8);
   }
+
+  .text p {
+    max-width: 300px;
+    font-size: 12px;
+  }
+
+  .responsive-image {
+    width: 230px;
+    height: 264px;
+    border-radius: 57px;
+  }
+
+
+  .name-image {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .button-pdf button {
+    width: 300px;
+    height: 60px;
+    font-size: 12px;
+    line-height: 154%;
+    border-radius: 15px;
+    padding: 35px 15px;
+  }
+
+  .button-pdf button img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .content {
+    margin-top: 50px;
+  }
+
 }
 </style>

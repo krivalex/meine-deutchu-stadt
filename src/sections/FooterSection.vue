@@ -2,7 +2,7 @@
   <section id="footer">
     <div class="class-content">
 
-      <div class="red-line"></div>
+      <!-- <div class="red-line"></div> -->
 
       <div class="image-part">
         <img src="@/assets/logo.png">
@@ -64,6 +64,7 @@ export default {
   border-top: 3px dashed #F9CD02;
   margin-top: 30px;
   position: relative;
+  width: 100vw;
 }
 
 .cities {
@@ -81,7 +82,6 @@ export default {
   align-items: center;
   flex-direction: row;
   margin-top: 40px;
-
 }
 
 .class-content {
@@ -89,8 +89,22 @@ export default {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  margin-left: 40px;
-  gap: calc(436/1920 * 100%);
+  height: 100%;
+}
+
+.image-part {
+  min-width: 40vw;
+  height: 100%;
+  border-top: 3px solid red;
+  margin-top: -5px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+}
+
+.text-info {
+  min-width: 60vw;
 }
 
 .image-part img {
@@ -106,10 +120,47 @@ export default {
 
 .red-line {
   height: 3px;
-  width: 35%;
+  width: 35vw;
   background-color: #ff0000;
   position: absolute;
   left: 0;
   top: -3px;
+}
+
+@media screen and (max-width: 784px) {
+
+  #footer {
+    width: 100vw;
+    height: 200px;
+  }
+
+  .text-info {
+    font-size: small;
+    margin: 0 auto;
+  }
+
+  .image-part img {
+    width: 122px;
+    height: 102px;
+    mix-blend-mode: multiply;
+  }
+
+  .cities {
+    gap: 15px;
+    max-width: 150px;
+    margin: 0 auto;
+  }
+
+  .info {
+    flex-direction: column;
+    gap: 10px;
+    max-width: 150px;
+    margin: 0 auto;
+  }
+
+  .class-content {
+    margin-left: 0px;
+  }
+
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar-main" v-show="showNavbar" v-if="$route.name !== 'place'">
+  <div class="navbar-main" v-show="showNavbar">
     <router-link to="/">Алматы</router-link>
     <router-link to="/">Астана</router-link>
     <router-link to="/">
@@ -88,5 +88,11 @@ export default {
   justify-content: center;
   flex-direction: row;
   filter: invert(0%);
+}
+
+@media (max-width: 768px) {
+  .navbar-main {
+    font-size: 15px;
+  }
 }
 </style>

@@ -3,25 +3,30 @@
     Карта маршрута
   </h1>
   <yandex-map style="width: 100%; height: 300px" v-if="true" :coordinates="[55.099943, 50.706567]">
-    <yandex-marker-cluster>
-      <yandex-marker :coordinates="[55.099943, 50.706567]" :markerId="card.id.toString()" :marker-type="Polyline">
-        <CardItem :card="card" />
-      </yandex-marker>
-    </yandex-marker-cluster>
+    <yandex-marker :coordinates="[55.099943, 50.706567]" :markerId="card.id.toString()" :icon="markerIcon">
+    </yandex-marker>
   </yandex-map>
 </template>
 
 <script>
-import { YandexMap, YandexMarker, YandexMarkerCluster } from 'vue-yandex-maps';
-import CardItem from '@/components/CardItem.vue';
+import { YandexMap, YandexMarker } from 'vue-yandex-maps';
+
 
 export default {
   name: 'yandex-section',
   components: {
     YandexMap,
-    YandexMarker,
-    YandexMarkerCluster,
-    CardItem,
+    YandexMarker
+  },
+  data() {
+    return {
+      markerIcon: {
+        iconLayout: 'default#image',
+        iconImageHref: require('@/assets/cards/1.png'),
+        iconImageSize: [30, 30],
+        iconImageOffset: [-15, -15],
+      }
+    }
   },
   computed: {
     card() {

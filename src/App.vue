@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar-main" v-show="showNavbar">
+  <div class="navbar-main" v-show="showNavbar" v-if="$route.name !== 'place'">
     <router-link to="/">Алматы</router-link>
     <router-link to="/">Астана</router-link>
     <router-link to="/">

@@ -1,24 +1,5 @@
 # meine-deutchu-stadt
 
-## Project setup
-```
-npm install
-```
+VUE 3, VUEX, VUE-MATERIAL, JS
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Сложная верстка по шаблону, и главное генерация маршрута автоматически в зависимости от числа точек, который нужно посетить - по сути написал полноценный шаблон.
